@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Artist Lyrics Analyzer</title>
+</head>
+<body>
+  <h1>Lyrical Lexicon</h1>
+  <h1>Enter an artist and see their most commonly used words</h1>
+  <form action="{{ url_for('analyze') }}" method="POST">
+    <input type="text" name="artist" placeholder="Enter artist name">
+    <input type="submit" value="Search">
+  </form>
+  <div id="search-results"></div>
+  <div id="results"></div>
+</body>
+</html>
+
+

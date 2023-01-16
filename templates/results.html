@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Results</title>
+</head>
+<body>
+  <h1> Out of 20 songs, these words appeared this many times:</h1>
+  <div id="results-box">
+    <ul>
+      {% for word, count in common_words %}
+        <li>{{ word }}: {{ count }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+</html>
