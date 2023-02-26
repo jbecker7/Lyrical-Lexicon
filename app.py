@@ -3,7 +3,7 @@ import lyricsgenius as genius
 import lyricsgenius
 import re
 import string
-key = "your-key-here"
+key = ""
 
 app = Flask(__name__)
 
@@ -34,6 +34,7 @@ def get_common_words(artist):
     lyrics = ""
     for song in artist_songs.songs:
         lyrics +=song.lyrics + " "
+    lyrics=lyrics.lower()
     words = lyrics.split()
     # remove special characters or punctuations... this is a work in progress
     words = [re.sub(r'[^\w\s]', '', word) for word in words]
