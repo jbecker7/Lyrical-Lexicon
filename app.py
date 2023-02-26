@@ -3,6 +3,7 @@ import lyricsgenius as genius
 import lyricsgenius
 import re
 import string
+key = "your-key-here"
 
 app = Flask(__name__)
 
@@ -28,7 +29,7 @@ def index():
     return render_template('index.html')
 
 def get_common_words(artist):
-    genius_api = lyricsgenius.Genius("key")
+    genius_api = lyricsgenius.Genius(key)
     artist_songs = genius_api.search_artist(artist, max_songs=20)
     lyrics = ""
     for song in artist_songs.songs:
